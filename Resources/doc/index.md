@@ -23,6 +23,8 @@ Add to AbstractKernel (app/AbstractKernel.php)
 new Sulu\Bundle\FormBundle\SuluFormBundle(),
 ```
 
+If you have the [SuluThemeBundle](https://github.com/sulu/SuluThemeBundle) enabled the FormBundle need to be registered **after** the SuluThemeBundle.
+
 ## Config
 
 Activate esi for csrf token reload on cache pages
