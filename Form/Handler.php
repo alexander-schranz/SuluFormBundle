@@ -143,7 +143,7 @@ class Handler implements HandlerInterface
                 $form,
                 $configuration
             ),
-            FormSavePreEvent::NAME
+            FormSavePostEvent::NAME
         );
     }
 
