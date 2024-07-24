@@ -23,6 +23,9 @@ class MailerHelperTest extends HelperTestCase
 
     public function testSendsEmailUsingMailerComponent()
     {
+        $this->assertIsObject(static::$kernel);
+        $this->assertSame(MailerKernel::class, static::$kernel::class);
+
         $formTranslationRepository = $this->entityManager->getRepository(FormTranslation::class);
         /** @var FormTranslation $formTranslation */
         $formTranslation = $formTranslationRepository->findOneBy(['title' => 'Title', 'locale' => 'de']);
